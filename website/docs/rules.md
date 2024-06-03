@@ -735,7 +735,7 @@ EndRods will detect block updates and redstone components will show their action
 | Block Type                                                   | How to log            |
 | ------------------------------------------------------------ | --------------------- |
 | Observer, Piston, EndRod                                     | pointing towards wool |
-| Repeater, Comparator, RedstoneTorch, RedstoneDust, Rail, Button, Lever, PressurePlate, TripwireHook | placed on wool        |
+| Repeater, Comparator, RedstoneTorch, RedstoneDust, Button, Lever, PressurePlate, TripwireHook | placed on wool        |
 
 Beside that, a universal block actions logging method is using EndRod on wool block to point on the block you want to log
 
@@ -1013,16 +1013,6 @@ Affected items: Spawn eggs, armorstand, ender crystal
 - Default value: `false`
 - Suggested options: `false`, `true`
 - Categories: `TIS`, `CREATIVE`
-
-
-## railDupingFix
-
-Disable rail duping using old school pushing lit powered or activator rail method
-
-- Type: `boolean`
-- Default value: `false`
-- Suggested options: `false`, `true`
-- Categories: `TIS`, `BUGFIX`
 
 
 ## redstoneDustRandomUpdateOrder
@@ -1377,20 +1367,6 @@ The switch of the TISCM network protocol
 - Categories: `TIS`, `TISCM_PROTOCOL`
 
 
-## tntDupingFix
-
-Disable TNT, carpet and part of rail dupers
-
-Attachment block update based dupers will do nothing and redstone component update based dupers can no longer keep their duped block
-
-~~Dupe bad dig good~~
-
-- Type: `boolean`
-- Default value: `false`
-- Suggested options: `false`, `true`
-- Categories: `TIS`, `BUGFIX`, `EXPERIMENTAL`
-
-
 ## tntIgnoreRedstoneSignal
 
 Prevent TNT blocks from being ignited from redstone
@@ -1476,20 +1452,6 @@ Their helmets will still get damaged in sunlight though
 - Type: `boolean`
 - Default value: `false`
 - Suggested options: `false`, `true`
-- Categories: `TIS`, `CREATIVE`
-
-
-## updateSuppressionSimulator
-
-Activator / Powered rail on a lapis ore simulates an update suppressor
-
-Right before a powered activator / powered rail on a lapis ore setting its powered state to false, throw the given JVM throwable
-
-`false`: rule disabled; `true`: rule enable and use `StackOverflowError`; others: feature enable and use given throwable
-
-- Type: `String`
-- Default value: `false`
-- Suggested options: `false`, `true`, `StackOverflowError`, `OutOfMemoryError`, `ClassCastException`
 - Categories: `TIS`, `CREATIVE`
 
 
