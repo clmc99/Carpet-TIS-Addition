@@ -1056,9 +1056,6 @@ carpettisaddition:
         desc: When placing / summoning entity with item, place the entity at the exact position of player's cursor target position
         extra:
           '0': 'Affected items: Spawn eggs, armorstand, ender crystal'
-      railDupingFix:
-        name: railDupingFix
-        desc: Disable rail duping using old school pushing lit powered or activator rail method
       redstoneDustRandomUpdateOrder:
         name: redstoneDustRandomUpdateOrder
         desc: Randomize the order for redstone dust to emit block updates
@@ -1203,12 +1200,6 @@ carpettisaddition:
       tiscmNetworkProtocol:
         name: tiscmNetworkProtocol
         desc: The switch of the TISCM network protocol
-      tntDupingFix:
-        name: tntDupingFix
-        desc: Disable TNT, carpet and part of rail dupers
-        extra:
-          '0': Attachment block update based dupers will do nothing and redstone component update based dupers can no longer keep their duped block
-          '1': Dupe bad dig good
       tntFuseDuration:
         name: tntFuseDuration
         desc: Overwrite the default fuse duration of TNT
@@ -1247,12 +1238,6 @@ carpettisaddition:
         desc: Prevent undead creatures burning in sunlight
         extra:
           '0': Their helmets will still get damaged in sunlight though
-      updateSuppressionSimulator:
-        name: updateSuppressionSimulator
-        desc: Activator / Powered rail on a lapis ore simulates an update suppressor
-        extra:
-          '0': Right before a powered activator / powered rail on a lapis ore setting its powered state to false, throw the given JVM throwable
-          '1': 'false: rule disabled; true: rule enable and use StackOverflowError; others: feature enable and use given throwable'
       visualizeProjectileLoggerEnabled:
         name: visualizeProjectileLoggerEnabled
         desc: Enable visualize projectile logger
