@@ -75,36 +75,6 @@ public abstract class EmitBlockUpdateMixins
 		}
 	}
 
-	@Mixin(PoweredRailBlock.class)
-	public static abstract class PoweredRailBlockMixin
-	{
-		@Inject(
-				method = "updateBlockState",
-				at = @At(
-						value = "INVOKE",
-						shift = At.Shift.AFTER,
-						target = "Lnet/minecraft/world/World;setBlockState(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;I)Z"
-				)
-		)
-		private void startEmitBlockUpdate(BlockState state, World world, BlockPos pos, Block neighbor, CallbackInfo ci)
-		{
-			MicroTimingLoggerManager.onEmitBlockUpdate(world, (PoweredRailBlock)(Object)this, pos, EventType.ACTION_START, "updateBlockState");
-		}
-
-		@Inject(
-				method = "updateBlockState",
-				at = @At("RETURN"),
-				locals = LocalCapture.CAPTURE_FAILHARD
-		)
-		private void endEmitBlockUpdate(BlockState state, World world, BlockPos pos, Block neighbor, CallbackInfo ci, boolean bl, boolean bl2)
-		{
-			if (bl2 != bl)  // vanilla copy, if power state should be changed
-			{
-				MicroTimingLoggerManager.onEmitBlockUpdate(world, (PoweredRailBlock) (Object) this, pos, EventType.ACTION_END, "updateBlockState");
-			}
-		}
-	}
-
 	@Mixin(LeverBlock.class)
 	public static abstract class LeverBlockMixin
 	{
