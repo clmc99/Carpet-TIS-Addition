@@ -1542,12 +1542,12 @@ Prevent players being kicked with message "Out-of-order chat packet received..."
 ## lightEngineMaxBatchSize
 
 - Source: fabric carpet [1.4.23](https://github.com/gnembon/fabric-carpet/releases/tag/1.4.23)
-- Target branches: 1.14.4, 1.15.2
+- Target branches: 1.15.2
 
 ## structureBlockOutlineDistance
 
 - Source: fabric carpet [1.4.25](https://github.com/gnembon/fabric-carpet/releases/tag/1.4.25)
-- Target branches: 1.14.4, 1.15.2
+- Target branches: 1.15.2
 
 ## yeetUpdateSuppressionCrash
 
