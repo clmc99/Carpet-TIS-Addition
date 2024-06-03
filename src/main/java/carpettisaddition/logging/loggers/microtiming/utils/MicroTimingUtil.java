@@ -199,7 +199,6 @@ public class MicroTimingUtil
 			woolPos = pos.offset(state.get(Properties.HORIZONTAL_FACING).getOpposite());
 		}
 		else if (
-				block instanceof AbstractRailBlock ||
 				block instanceof AbstractRedstoneGateBlock ||
 				block instanceof RedstoneTorchBlock ||
 				block instanceof RedstoneWireBlock ||
