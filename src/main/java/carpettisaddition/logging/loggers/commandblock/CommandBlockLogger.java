@@ -26,7 +26,6 @@ import carpettisaddition.utils.Messenger;
 import carpettisaddition.utils.compat.DimensionWrapper;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.entity.vehicle.CommandBlockMinecartEntity;
 import net.minecraft.text.BaseText;
 import net.minecraft.text.ClickEvent;
 import net.minecraft.util.ChatUtil;
@@ -117,21 +116,6 @@ public class CommandBlockLogger extends AbstractLogger
 				Messenger.coord("w", pos, DimensionWrapper.of(world)),
 				executor,
 				String.format("/execute in %s run setblock %d %d %d %s", DimensionWrapper.of(world).getIdentifier(), pos.getX(), pos.getY(), pos.getZ(), Registry.BLOCK.getId(Blocks.AIR))
-		);
-	}
-
-	public void onCommandBlockMinecartActivated(CommandBlockMinecartEntity entity)
-	{
-		if (ChatUtil.isEmpty(entity.getCommandExecutor().getCommand()))
-		{
-			return;
-		}
-		this.logCommandBlockExecution(
-				entity.getEntityWorld(),
-				Messenger.entity(null, entity),
-				Messenger.coord("w", entity.getPos(), DimensionWrapper.of(entity)),
-				entity.getCommandExecutor(),
-				String.format("/kill %s", entity.getUuidAsString())
 		);
 	}
 }
