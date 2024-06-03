@@ -523,10 +523,7 @@ public class CarpetTISAdditionSettings
 	public static boolean persistentLoggerSubscription = false;
 
 	@Rule(categories = {TIS, CREATIVE})
-	public static boolean preciseEntityPlacement = false;
-
-	@Rule(categories = {TIS, BUGFIX})
-	public static boolean railDupingFix = false;
+	public static boolean preciseEntityPlacement = false
 
 	@Rule(categories = {TIS, CREATIVE})
 	public static boolean redstoneDustRandomUpdateOrder = false;
@@ -688,9 +685,6 @@ public class CarpetTISAdditionSettings
 	@Rule(categories = {TIS, TISCM_PROTOCOL})
 	public static boolean tiscmNetworkProtocol = false;
 
-	@Rule(categories = {TIS, BUGFIX, EXPERIMENTAL})
-	public static boolean tntDupingFix = false;
-
 	public static final int VANILLA_TNT_FUSE_DURATION = 80;
 	@Rule(
 			options = {"0", "80", "32767"},
@@ -766,27 +760,6 @@ public class CarpetTISAdditionSettings
 
 	@Rule(categories = {TIS, CREATIVE})
 	public static boolean undeadDontBurnInSunlight = false;
-
-    @Rule(
-            categories = {TIS, CREATIVE},
-		    validators = UpdateSuppressionSimulatorValidator.class,
-            options = {"false", "true", "StackOverflowError", "OutOfMemoryError", "ClassCastException"}
-    )
-    public static String updateSuppressionSimulator = "false";
-    private static class UpdateSuppressionSimulatorValidator extends AbstractCheckerValidator<String>
-    {
-	    @Override
-	    protected boolean validateValue(String value)
-	    {
-            return UpdateSuppressionSimulator.checkRule(value);
-	    }
-
-	    @Override
-	    public void onRuleSet(ValidationContext<String> ctx, String newValue)
-	    {
-		    UpdateSuppressionSimulator.acceptRule(newValue);
-	    }
-    }
 
 	@Rule(categories = {TIS, CREATIVE})
 	public static boolean visualizeProjectileLoggerEnabled = false;
