@@ -1015,16 +1015,6 @@ sidebar_position: 1
 - 分类: `TIS`, `CREATIVE`
 
 
-## 刷铁轨机修复 (railDupingFix)
-
-禁用老式的移动点亮的充能或激活铁轨的刷铁轨机
-
-- 类型: `boolean`
-- 默认值: `false`
-- 参考选项: `false`, `true`
-- 分类: `TIS`, `BUGFIX`
-
-
 ## 红石粉随机更新顺序 (redstoneDustRandomUpdateOrder)
 
 随机化红石粉发出方块更新的顺序
@@ -1377,20 +1367,6 @@ TISCM网络协议的开关
 - 分类: `TIS`, `TISCM_PROTOCOL`
 
 
-## TNT复制修复 (tntDupingFix)
-
-禁用TNT、地毯以及部分铁轨的复制机
-
-基于依附性方块的复制机会无法复制，基于红石原件更新的复制机会无法保留被复制的方块
-
-~~Dupe bad dig good~~
-
-- 类型: `boolean`
-- 默认值: `false`
-- 参考选项: `false`, `true`
-- 分类: `TIS`, `BUGFIX`, `EXPERIMENTAL`
-
-
 ## TNT引信时长 (tntFuseDuration)
 
 覆盖 TNT 的默认引信时长
@@ -1476,20 +1452,6 @@ TISCM网络协议的开关
 - 类型: `boolean`
 - 默认值: `false`
 - 参考选项: `false`, `true`
-- 分类: `TIS`, `CREATIVE`
-
-
-## 更新抑制模拟器 (updateSuppressionSimulator)
-
-青金石矿石上方的激活 / 充能铁轨可模拟更新抑制器
-
-在青金石矿石上已亮起的激活 / 充能铁轨将要熄灭时，抛出所提供的 JVM 异常
-
-`false`: 关闭规则; `true`: 启用规则并使用 `StackOverflowError`; 其他: 启用规则并使用所给异常
-
-- 类型: `String`
-- 默认值: `false`
-- 参考选项: `false`, `true`, `StackOverflowError`, `OutOfMemoryError`, `ClassCastException`
 - 分类: `TIS`, `CREATIVE`
 
 
