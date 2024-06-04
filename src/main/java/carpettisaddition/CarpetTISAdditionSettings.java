@@ -523,7 +523,7 @@ public class CarpetTISAdditionSettings
 	public static boolean persistentLoggerSubscription = false;
 
 	@Rule(categories = {TIS, CREATIVE})
-	public static boolean preciseEntityPlacement = false
+	public static boolean preciseEntityPlacement = false;
 
 	@Rule(categories = {TIS, CREATIVE})
 	public static boolean redstoneDustRandomUpdateOrder = false;
