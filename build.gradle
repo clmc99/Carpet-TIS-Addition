@@ -24,7 +24,6 @@ preprocess {
 	def mc1206 = createNode('1.20.6', 1_20_06, '')
 	def mc121  = createNode('1.21'  , 1_21_00, '')
 
-	mc115 .link(mc114 , file('versions/mapping-1.15-1.14.txt'))
 	mc115 .link(mc116 , file('versions/mapping-1.15-1.16.txt'))
 	mc116 .link(mc117 , file('versions/mapping-1.16-1.17.txt'))
 	mc117 .link(mc118 , file('versions/mapping-1.17-1.18.txt'))
