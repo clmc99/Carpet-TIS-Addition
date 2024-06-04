@@ -1542,12 +1542,12 @@ TISCM网络协议的开关
 ## 光照引擎最大任务组数 (lightEngineMaxBatchSize)
 
 - 移植自：fabric carpet [1.4.23](https://github.com/gnembon/fabric-carpet/releases/tag/1.4.23)
-- 移植的分支：1.14.4, 1.15.2
+- 移植的分支：1.15.2
 
 ## 结构方块轮廓距离 (structureBlockOutlineDistance)
 
 - 移植自：fabric carpet [1.4.25](https://github.com/gnembon/fabric-carpet/releases/tag/1.4.25)
-- 移植的分支：1.14.4, 1.15.2
+- 移植的分支：1.15.2
 
 ## 阻止更新抑制崩溃 (yeetUpdateSuppressionCrash)
 
